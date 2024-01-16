@@ -13,8 +13,13 @@ struct CircleView: View {
     @State var radius = 10.0
     //MARK: Computed Properties
     var body: some View {
-        Text("\(radius)")
-            .font(.largeTitle)
+        VStack {
+            Text("\(radius)")
+                .font(.largeTitle)
+            Slider(value: $radius, in: 0...100)
+        }
+        .padding()
+        
     }
 }
 
